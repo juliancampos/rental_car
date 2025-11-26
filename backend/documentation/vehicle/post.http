@@ -1,0 +1,13 @@
+@url=http://localhost:3000/vehicle
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "placa": "QOH-1212",
+    "chassi": "aaaaaaa",
+    "renavam": "123456789",
+    "modelo": "Fiesta",
+    "marca": "Ford",
+    "ano": "2018"
+}

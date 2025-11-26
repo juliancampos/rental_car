@@ -1,0 +1,7 @@
+@url=http://localhost:3000/vehicle
+
+### Search all vehicles
+GET {{url}}
+
+### Search only one vehicle
+GET {{url}}?placa=QOH-1213
