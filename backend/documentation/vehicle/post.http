@@ -4,10 +4,20 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "placa": "QOH-1212",
-    "chassi": "aaaaaaa",
-    "renavam": "123456789",
+    "placa": "QOH-1212asdfasdfasdf",
+    "chassi": "aaaaaaasadfasdfadsfasdfasdfasdf",
+    "renavam": "123456789asdfasdfasdfasdf",
     "modelo": "Fiesta",
     "marca": "Ford",
     "ano": "2018"
 }
+
+
+###
+
+774 9880 0113 900 1
+
+00571120251127009003
+
+Declara;áo de adimplencia 
+Declaração d carencias 

@@ -1,13 +1,15 @@
 import { Inject, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { PrismaService } from '../database/prisma.service';
 import { Prisma, Vehicle } from '@prisma/client';
+import { CreateVehicleDto } from './dto/create-vehicle.dto';
+import { UpdateVehicleDto } from './dto/update-vehicle.dto';
 
 @Injectable()
 export class VehicleService {
     @Inject()
     private readonly prisma: PrismaService
 
-    async create(data: Prisma.VehicleCreateInput) {
+    async create(data: CreateVehicleDto) {
         const vehicleExists = await this.prisma.vehicle.findMany({
             where: {
                 OR: [
@@ -49,10 +51,7 @@ export class VehicleService {
         })
     }
 
-    async update(params: {
-        id: number,
-        data: Prisma.VehicleUpdateInput
-    }): Promise<Vehicle> {
+    async update(params: { id: number, data: UpdateVehicleDto }): Promise<Vehicle> {
         return await this.prisma.vehicle.update({
             where: { id : params.id },
             data: params.data
@@ -62,5 +61,4 @@ export class VehicleService {
     async delete(where: Prisma.VehicleWhereUniqueInput): Promise<Vehicle> {
         return this.prisma.vehicle.delete({ where })
     }
-
 }   

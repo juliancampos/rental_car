@@ -1,7 +1,7 @@
 @url=http://localhost:3000/vehicle
 
 ### Update a vehicle
-PUT {{url}}/1
+PUT {{url}}/aaaa
 Content-Type: application/json
 
 {
