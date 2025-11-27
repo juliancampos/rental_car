@@ -1,4 +1,4 @@
-import { Body, ConflictException, Controller, Delete, Get, Inject, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Inject, Param, Post, Put } from '@nestjs/common';
 import { VehicleService } from './vehicle.service';
 import { Prisma, Vehicle } from '@prisma/client';
 

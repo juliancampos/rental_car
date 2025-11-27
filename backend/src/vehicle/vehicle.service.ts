@@ -1,5 +1,5 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/database/prisma.service';
+import { Inject, Injectable, InternalServerErrorException } from '@nestjs/common';
+import { PrismaService } from '../database/prisma.service';
 import { Prisma, Vehicle } from '@prisma/client';
 
 @Injectable()
@@ -19,7 +19,7 @@ export class VehicleService {
         });
 
         if (vehicleExists.length > 0) {
-            throw new Error('Vehicle already exists');
+            throw new InternalServerErrorException('Vehicle already exists');
         }
 
         return await this.prisma.vehicle.create({ data });
