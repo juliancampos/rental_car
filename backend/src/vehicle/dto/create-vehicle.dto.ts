@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, Length } from 'class-validator';
+import { IsString, IsNotEmpty, Length, MIN_LENGTH, MinLength } from 'class-validator';
 
 export class CreateVehicleDto {
   @Length(8)
@@ -6,27 +6,27 @@ export class CreateVehicleDto {
   @IsNotEmpty()
   placa: string;
 
-  @Length(10)
   @IsString()
   @IsNotEmpty()
+  @MinLength(10)
   chassi: string;
 
-  @Length(10)
+  @MinLength(10)
   @IsString()
   @IsNotEmpty()
   renavam: string;
 
-  @Length(30)
+  @MinLength(2)
   @IsString()
   @IsNotEmpty()
   modelo: string;
 
-  @Length(10)
+  @MinLength(2)
   @IsString()
   @IsNotEmpty()
   marca: string;
 
-  @Length(10)
+  @Length(4)
   @IsString()
   @IsNotEmpty()
   ano: string;

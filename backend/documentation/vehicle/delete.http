@@ -1,4 +1,4 @@
 @url=http://localhost:3000/vehicle
 
 ## Delete a vehicle
-DELETE {{url}}
+DELETE {{url}}/0

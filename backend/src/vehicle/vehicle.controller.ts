@@ -15,8 +15,9 @@ export class VehicleController {
     }
 
     @Get()
-    async findAll(): Promise<Vehicle[]> {
-        return await this.vehicleService.findAll({})
+    async findAll(): Promise<{ data: Vehicle[] }> {
+        const vehicles = await this.vehicleService.findAll({});
+        return { data: vehicles }
     }
 
     @Put(':id')
@@ -31,7 +32,7 @@ export class VehicleController {
     }
 
     @Delete(':id')
-    async delete(@Param('id') id: Prisma.VehicleWhereUniqueInput): Promise<Vehicle> {
+    async remove(@Param('id', new ParseIntPipe({ errorHttpStatusCode: HttpStatus.NOT_ACCEPTABLE })) id: number): Promise<Vehicle> {
         return await this.vehicleService.delete(id)
     }
 }

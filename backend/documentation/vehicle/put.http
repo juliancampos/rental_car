@@ -1,9 +1,9 @@
 @url=http://localhost:3000/vehicle
 
 ### Update a vehicle
-PUT {{url}}/aaaa
+PUT {{url}}/0
 Content-Type: application/json
 
 {
-    "modelo": "New Fiesta"
+    "marca": "Volkswagen"
 }

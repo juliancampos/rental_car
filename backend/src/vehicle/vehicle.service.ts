@@ -58,7 +58,7 @@ export class VehicleService {
         })
     }
 
-    async delete(where: Prisma.VehicleWhereUniqueInput): Promise<Vehicle> {
-        return this.prisma.vehicle.delete({ where })
+    async delete(id: number): Promise<Vehicle> {
+        return this.prisma.vehicle.delete({ where: { id } })
     }
 }   
