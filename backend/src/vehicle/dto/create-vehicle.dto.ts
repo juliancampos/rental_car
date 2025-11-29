@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, Length, MIN_LENGTH, MinLength } from 'class-validator';
+import { IsString, IsNotEmpty, Length, MinLength } from 'class-validator';
 
 export class CreateVehicleDto {
   @Length(8)
@@ -11,7 +11,7 @@ export class CreateVehicleDto {
   @MinLength(10)
   chassi: string;
 
-  @MinLength(10)
+  @MinLength(9)
   @IsString()
   @IsNotEmpty()
   renavam: string;
