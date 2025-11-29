@@ -1,6 +1,6 @@
 {
   "name": "rental_car",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Info - Desafio backend: api para registro de veículos",
   "author": "Julian Oliveira Campos",
   "private": true,
